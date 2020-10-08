@@ -1,0 +1,73 @@
+# Mageplaza
+#
+# NOTICE OF LICENSE
+#
+# This source file is subject to the Mageplaza.com license that is
+# available through the world-wide-web at this URL:
+# https://www.mageplaza.com/LICENSE.txt
+#
+# DISCLAIMER
+#
+# Do not edit or add to this file if you wish to upgrade this extension to newer
+# version in the future.
+#
+# @category    Mageplaza
+# @package     Mageplaza_QuickOrderGraphQl
+# @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+# @license     https://www.mageplaza.com/LICENSE.txt
+
+type Query {
+    mpQuickOrder: [mpQuickOrderOutput] @resolver(class: "\\Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\ItemsList") @doc(description: "Query to get list of items in Quick Order.")
+}
+
+type Mutation {
+    mpQuickOrderSKUs (
+        sku: [String]! @doc(description: "Data input")
+    ): [mpQuickOrderOutput] @resolver(class: "Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\AddBySku") @doc(description: "Add item to list by SKU")
+    mpQuickOrderClearAll: Boolean @resolver(class: "Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\ClearAll") @doc(description: "Clear all the items in the list")
+    mpQuickOrderItemsDelete (
+        id: Int! @doc(description: "Data input")
+    ): Boolean @resolver(class: "Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\DeleteById") @doc(description: "Delete item in the list by ID")
+    mpQuickOrderItemsUpdate (
+        items: [ItemUpdateInput]! @doc(description: "Data input")
+    ): [mpQuickOrderOutput] @resolver(class: "Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\Update") @doc(description: "Update items")
+    mpQuickOrderAddToCart: AddToCartOutput @resolver(class: "Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\AddToCart") @doc(description: "Add list quick order items to cart")
+}
+
+type mpQuickOrderOutput {
+    item_id: String @doc(description: "Item ID"),
+    product_id: String @doc(description: "Product ID"),
+    name: String @doc(description: "Name"),
+    sku: String @doc(description: "SKU"),
+    sku_child: String @doc(description: "Child SKU"),
+    qty: String @doc(description: "Quantity"),
+    qtystock: Int @doc(description: "Stock quantity"),
+    qty_salable: Int @doc(description: "Saleable quantity"),
+    price: Int @doc(description: "Price"),
+    imageUrl: String @doc(description: "Image URL"),
+    type_id: String @doc(description: "Type ID"),
+    product_url: String @doc(description: "Product URL"),
+    customOptionValue: String @doc(description: "Custom option value"),
+    options: String @doc(description: "Options"),
+    optionIds: String @doc(description: "Options IDs"),
+    options_select_value: String @doc(description: "Options select value"),
+    options_select_value_id: String @doc(description: "Options velect value ID"),
+    super_attribute: String @doc(description: "Super attribute"),
+    outofstock: String @doc(description: "Out of stock"),
+    customOptions: String @doc(description: "Custom Options"),
+    childProduct: String @doc(description: "Child product"),
+    bundleOption: String @doc(description: "Bundle option"),
+    bundleProduct: String @doc(description: "Bundle product"),
+    bundleSelectOption: String @doc(description: "Bundle select option"),
+    customerGroup: Int @doc(description: "Customer Group"),
+    tier_price: String @doc(description: "Tier price")
+}
+
+input ItemUpdateInput {
+    item_id: String @doc(description: "The Item ID")
+    value: String @doc(description: "The new value of item")
+}
+
+type AddToCartOutput {
+    quote_id: String @doc(description: "The quote id")
+}

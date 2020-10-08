@@ -1,2 +1,2 @@
-# Quick Order Graphql
+# Quick Order GraphQl
 
