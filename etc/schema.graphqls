@@ -26,7 +26,7 @@ type Mutation {
     ): [mpQuickOrderOutput] @resolver(class: "Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\AddBySku") @doc(description: "Add item to list by SKU")
     mpQuickOrderClearAll: Boolean @resolver(class: "Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\ClearAll") @doc(description: "Clear all the items in the list")
     mpQuickOrderItemsDelete (
-        id: Int! @doc(description: "Data input")
+        id: String! @doc(description: "Data input")
     ): Boolean @resolver(class: "Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\DeleteById") @doc(description: "Delete item in the list by ID")
     mpQuickOrderItemsUpdate (
         items: [ItemUpdateInput]! @doc(description: "Data input")
