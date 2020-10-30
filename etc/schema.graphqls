@@ -18,6 +18,7 @@
 
 type Query {
     mpQuickOrder: [mpQuickOrderOutput] @resolver(class: "\\Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\ItemsList") @doc(description: "Query to get list of items in Quick Order.")
+    mpQuickOrderConfigs: ConfigOutput @resolver(class: "\\Mageplaza\\QuickOrderGraphQl\\Model\\Resolver\\Configs") @doc(description: "Query to get config of Quick Order.")
 }
 
 type Mutation {
@@ -71,3 +72,31 @@ input ItemUpdateInput {
 type AddToCartOutput {
     quote_id: String @doc(description: "The quote id")
 }
+
+type ConfigOutput {
+    general: GeneralOutput @doc(description: "The General config output")
+    search: SearchOutput @doc(description: "The Search config output")
+    design: DesignOutput @doc(description: "The Design config output")
+}
+
+type GeneralOutput {
+    enabled: String @doc(description: "Enabled")
+    route_name: String @doc(description: "Route Name")
+    page_title: String @doc(description: "Page Title")
+    allow_customer_group: String @doc(description: "Allow Customer Group")
+    show_quickorder_button: String @doc(description: "Quick Order label")
+    quickorder_label: String @doc(description: "Show Quick Order Link")
+}
+
+type SearchOutput {
+    minimum_character: String @doc(description: "Autosearch minimum character")
+    limit_search_results: String @doc(description: "Limit search results")
+    display_product_image: String @doc(description: "Display product image")
+}
+
+type DesignOutput {
+    heading_background_color: String @doc(description: "Heading Background Color")
+    heading_text_color: String @doc(description: "Heading Text Color")
+    heading_background_button: String @doc(description: "Heading Background Button")
+}
+
