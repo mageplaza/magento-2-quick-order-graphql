@@ -24,6 +24,7 @@ declare(strict_types=1);
 namespace Mageplaza\QuickOrderGraphQl\Model\Resolver;
 
 use Magento\Framework\GraphQl\Config\Element\Field;
+use Magento\Framework\GraphQl\Exception\GraphQlNoSuchEntityException;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Mageplaza\QuickOrder\Api\RequestsManagementInterface;
@@ -111,7 +112,7 @@ abstract class AbstractResolver implements ResolverInterface
     public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
     {
         if (!$this->helperData->isEnabled()) {
-            throw new LocalizedException(__('Module is disabled.'));
+            throw new GraphQlNoSuchEntityException(__('Module is disabled.'));
         }
     }
 

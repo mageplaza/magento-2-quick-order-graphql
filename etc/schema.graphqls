@@ -80,7 +80,7 @@ type ConfigOutput {
 }
 
 type GeneralOutput {
-    enabled: String @doc(description: "Enabled")
+    enabled: Boolean @doc(description: "Enabled")
     route_name: String @doc(description: "Route Name")
     page_title: String @doc(description: "Page Title")
     allow_customer_group: String @doc(description: "Allow Customer Group")
@@ -91,7 +91,7 @@ type GeneralOutput {
 type SearchOutput {
     minimum_character: String @doc(description: "Autosearch minimum character")
     limit_search_results: String @doc(description: "Limit search results")
-    display_product_image: String @doc(description: "Display product image")
+    display_product_image: Boolean @doc(description: "Display product image")
 }
 
 type DesignOutput {
