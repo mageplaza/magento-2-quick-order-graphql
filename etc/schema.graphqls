@@ -52,7 +52,7 @@ type mpQuickOrderOutput {
     options: String @doc(description: "Options"),
     optionIds: String @doc(description: "Options IDs"),
     options_select_value: String @doc(description: "Options select value"),
-    options_select_value_id: String @doc(description: "Options velect value ID"),
+    options_select_value_id: String @doc(description: "Options select value ID"),
     super_attribute: String @doc(description: "Super attribute"),
     outofstock: String @doc(description: "Out of stock"),
     customOptions: String @doc(description: "Custom Options"),
@@ -89,7 +89,7 @@ type GeneralOutput {
 }
 
 type SearchOutput {
-    minimum_character: String @doc(description: "Autosearch minimum character")
+    minimum_character: String @doc(description: "Auto search minimum character")
     limit_search_results: String @doc(description: "Limit search results")
     display_product_image: Boolean @doc(description: "Display product image")
 }
