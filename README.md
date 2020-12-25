@@ -14,7 +14,7 @@ Wholesale customers can add products to their carts in bulk without having to ad
 
 With a highly customizable design, you can configure the module easily from the admin backend to create an optimized Quick Order page for your store. You can design the page to match your store’s theme by changing the heading text/background/button color. The module keeps your Quick Order page simple and easy to navigate with only essential buttons like an instant search box, Add to cart, Add products by SKU/CSV file, and a Checkout button. 
 
-Mageplaza Quick Order for Magento 2 bring your customers peace of mind in the order process that increases customer satisfaction and sales for your store.
+Mageplaza Quick Order for Magento 2 brings your customers peace of mind in the order process that increases customer satisfaction and sales for your store.
 
 ## 1. How to install
 
