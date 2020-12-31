@@ -40,8 +40,8 @@ To perform GraphQL queries in Magento, please do the following requirements:
 
 ## 3. Devdocs
 
-- [Quick Order API & examples](https://documenter.getpostman.com/view/10589000/TVYDezUh)
-- [Quick Order GraphQL & examples](https://documenter.getpostman.com/view/10589000/TVYDfKW9)
+- [Magento 2 Quick Order API & examples](https://documenter.getpostman.com/view/10589000/TVYDezUh)
+- [Magento 2 Quick Order GraphQL & examples](https://documenter.getpostman.com/view/10589000/TVYDfKW9)
 
 Click on Run in Postman to add these collections to your workspace quickly.
 
@@ -54,4 +54,4 @@ Feel free to **Fork** and contribute to this module and create a pull request so
 ## 5. Get Support
 
 - Feel free to [contact us](https://www.mageplaza.com/contact.html) if you have any further questions. Our support team will be alway here to help. 
-- Like this project, Give us a **Star** ![star](https://i.imgur.com/S8e0ctO.png)
+- If you like this project, please give us a **Star** ![star](https://i.imgur.com/S8e0ctO.png)
